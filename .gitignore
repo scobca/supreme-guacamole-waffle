@@ -7,3 +7,7 @@
 
 *.env
 .venv/
+
+.gradle
+build
+.kotlin
