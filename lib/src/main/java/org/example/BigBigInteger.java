@@ -64,6 +64,33 @@ public final class BigBigInteger implements Comparable<BigBigInteger> {
         return acc.multiply(BigInteger.valueOf(sign));
     }
 
+    public boolean isZero() {
+        return sign == 0;
+    }
+
+    public int getSign() {
+        return sign;
+    }
+
+    public List<BigInteger> getDigits() {
+        return digits;
+    }
+
+    public BigBigInteger add(BigBigInteger other) {
+        BigInteger r = this.toBigInteger().add(other.toBigInteger());
+        return new BigBigInteger(r);
+    }
+
+    public BigBigInteger subtract(BigBigInteger other) {
+        BigInteger r = this.toBigInteger().subtract(other.toBigInteger());
+        return new BigBigInteger(r);
+    }
+
+    public BigBigInteger multiply(BigBigInteger other) {
+        BigInteger r = this.toBigInteger().multiply(other.toBigInteger());
+        return new BigBigInteger(r);
+    }
+
     @Override
     public int compareTo(BigBigInteger o) {
         return this.toBigInteger().compareTo(o.toBigInteger());
