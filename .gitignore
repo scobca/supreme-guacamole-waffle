@@ -1,9 +1,11 @@
-.idea/
-.idea_modules/
+.idea
 
 ._*
 
 *.log
 
 *.env
-.venv/
+
+.gradle
+build
+.kotlin
